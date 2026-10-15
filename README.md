@@ -37,6 +37,14 @@ Para testar e rodar o projeto diretamente no seu computador, siga os passos abai
 
 ---
 
+--- 
+
+## Como acessar online?
+
+acesse o link: ```https://desenvolvedorback.github.io/portal-educacional/````
+e coloque o sub arquivo que deseja, exemplo:
+https://desenvolvedorback.github.io/portal-educacional/contato.html --> Leva a pagina HTML de contato.
+
 ## 💡 Sobre o Desenvolvimento
 
 Este projeto faz parte das aulas práticas do **Senai Botucatu**, servindo como modelo didático para o ensino de estruturação semântica, formulários avançados com validação nativa e estilização moderna de layouts voltados para a experiência do usuário.
