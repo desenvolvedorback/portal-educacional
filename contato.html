@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplo: HTML Semantico e Forms</title>
+    <style>
+        
+        /* Estilos básicos para deixar a página a página visualmente organizada */
+        body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color:white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            margin-bottom: 30px;
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        /*Estilos para o formulário*/
+        fieldset {
+            border: 2px solid #34495e;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            background: #34495e;
+            color: white;
+            padding: 5px 10px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        .campo label {
+            display:block;
+            margin-bottom:5px;
+            font-weight:bold;
+
+        }
+
+        .campo input, .campo select, .campo textarea {
+         width:100%;
+         padding: 8px;
+         box-sizing: border-box;
+        }
+
+        button {
+        background: #3b5e34;
+        border-radius: 6px;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        }
+        
+
+        button:hover {
+        background: #30502c;
+        }
+
+        #sla {
+            color: #34495e;
+            border-radius: 4px;
+            border:#3b5e34 solid 1px;
+            box-shadow: 1px solid #34495e;
+            text-decoration: none;
+            padding: 12px;
+        }
+
+        #sla:hover {
+            background: #889b84;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    Explicando HTML Semantico:
+    Diferente das antigas <div> genéricas, as tags semanticas dão "significado"
+    ao código, isso ajuda muito o GOOGLE (SEO) a entender o site e leitores de
+    tela para deficientes visuais
+    -->
+
+    <!-- <header>: Cabeçalho principal da página ou de uma seção -->
+    <header>
+        <h1>Portal Educacional Tech Senai Botucatu</h1>
+        <p>Aprenda Desenvolvimento WEB moderno do jeito certo!</p>
+    </header>
+
+    <!-- <nav>: Bloco dedicado exclusivamente aos links de navegação (Menu) -->
+    <nav>
+        <a href="sobre.html">Sobre</a>
+        <a href="cursos.html">Cursos</a>
+        <a href="semantica.html">Inscrição</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+
+    <!-- <main>: Conteúdo principal e exclusivo da página (só deve existir um por página) -->
+    <main>
+        <!-- <article>: Conteudo independente (como um post de blog ou noticia) -->
+        
+        <!-- <section> focada em formularios avançados -->
+        <section id="contato">
+            <h2>Formulário de Contato</h2>
+            <!--
+            EXPLICANDO FORMULÁRIOS AVANÇADOS (<FIELDSET> E <LEGEND>):
+            O <fieldset> serve para agrupar visualmente e semanticamente
+            campos relacionados. O <legend> cria um "título" ou legenda
+            descritiva em cima da borda do fieldset. O uso do atributo 'for'
+            no <label> ligado ao 'id' do <input> garante acessibilidade (ao
+            clicar no texto, foca no campo)" 
+            -->
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Dados Pessoais</legend>
+                    <div class="campo">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail de contato:</label>
+                        <!-- Usar type="email" força o navegador se tem o formato de email -->
+                        <input type="email" id="email" placeholder="seu@email.com" required>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Informações adicionais</legend>
+                    <div class="campo">
+                        <label for="mensagem">Informação adicional:</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva brevemente..."></textarea>
+                            </div>
+                            
+                        </fieldset>
+                        <button type="submit">Enviar Formulário</button>
+                 </form>
+            </section>
+
+
+        <section id="contato2">
+            <h2>Entre em contato com a nossa equipe:</h2>
+            <p>
+                Escolha um dos nossos canais de comunicação para entrar em contato com a nossa equipe.
+            </p>
+            <a id="sla" href="https://www.instagram.com/senai_botucatu/" target="_blank">Canal Instagram</a>
+            <a id="sla" href="https://www.facebook.com/senai.botucatu" target="_blank">Canal Facebook</a>
+            <a id="sla" href="https://www.linkedin.com/company/senai-botucatu/" target="_blank">Canal Linkedin</a>
+            <a id="sla" href="#" target="_blank">Canal de Ouvidoria</a>
+            <a id="sla" href="https://api.whatsapp.com/send?phone=5514991023986&text=Ol%C3%A1!%20Quero%20Tirar%20uma%20duvida%20perante%20ao%20curso...." target="_blank">Canal Whatsapp</a>
+        </section>
+    </main>
+    <!--<footer>: Rodapé do site (geralmente contém copyright, links secundários e redes sociais)-->
+    <footer>
+        <p>&copy; 2026 - Curso Tecnico em Desenvolvimento de Sistemas. Todos os direitos reservados.</p>
+    </footer>
+  </body>
+</html>
