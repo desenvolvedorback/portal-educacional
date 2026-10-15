@@ -37,13 +37,14 @@ Para testar e rodar o projeto diretamente no seu computador, siga os passos abai
 
 ---
 
---- 
 
 ## Como acessar online?
 
 acesse o link: ```https://desenvolvedorback.github.io/portal-educacional/````
 e coloque o sub arquivo que deseja, exemplo:
 https://desenvolvedorback.github.io/portal-educacional/contato.html --> Leva a pagina HTML de contato.
+
+--- 
 
 ## 💡 Sobre o Desenvolvimento
 
