@@ -21,6 +21,7 @@ O projeto é composto por páginas independentes integradas por um menu de naveg
 2.  **`cursos.html`:** Seção detalhada apresentando os principais módulos do curso (Desenvolvimento Web Full Stack, Aplicativos Mobile, Back-end & APIs Seguras e Automação).
 3.  **`sobre.html`:** Apresentação institucional com os objetivos de aprendizado, diferenciais e metas do curso técnico.
 4.  **`contato.html`:** Página com formulário de contato e links diretos para as redes sociais oficiais e canais de atendimento (WhatsApp, Instagram, Facebook, LinkedIn e Ouvidoria).
+5.  **`flexbox.html`:** Exemplo de uso do flexbox para alinhamento e distribuição de conteúdo.
 
 ---
 
