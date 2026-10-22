@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dominando o Flexbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #eef2f3;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #333;
+        }
+        /* 
+        Conceito de Flexbox: Para ativar o flexbox transformamos o elemento
+        Pai em um conteiner flexivel usando display: flex.
+        Por padãoele joga todos os filhos lado a lado em linha.
+        */
+
+        .exemplo-container {
+            display: flex;
+            background: #fff;
+            border: 2px solid #ccc;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            /*
+            Propiedades alinhado no Pai (container):
+            - justify-content: alinha horizontalmente (main axis).
+            opções: flex-start, flex-end, center, space-between, space-around, space-evenly.
+            - align-items: alinha verticalmente (cross axis).
+            opções: stretch, flex-start, flex-end, center.
+            -gap: cria um espaço automatico (espaçamento) entre os itens filhos.
+            - flex-wrap: determina se os itens quebram de linha se a tela for
+             menor(wrap) ou não(nowrap).
+            */
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            height: 150px; /* definido para demonstrar o aligh-items */
+        }
+        .caixa {
+            background: #3498db;
+            color: white;
+            width: 100px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 6px;
+        }
+        /* Cores diferentes para identificar as caixas facilmente */
+        .c1 { background: #e74c3c; }
+        .c2 { background: #e67e22; }
+        .c3 { background: #2ecc71; }
+        .c4 { background: #9b59b6; }
+
+        /* Exemplo prático de layout de cards com flexbox */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            /* faz com que o card cresça ou encolha de forma flexivel, prencendo o espaço*/
+            flex: 1 1 250px;
+        }
+        .card h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h1> Guia Prático de Flexbox</h1>
+    <h2>1. Alinhamento e distribuição com o Pai</h2>
+    <p>Neste exemplo, o container usa <code>justify-content: space-between</code>
+         e <code>align-items: center</code>.</p>
+         <div class="exemplo-container">
+            <div class="caixa c1">1</div>
+            <div class="caixa c2">2</div>
+            <div class="caixa c3">3</div>
+            <div class="caixa c4">4</div>
+         </div>
+         <h2>2. Estrutura de Cards Responsivos (exemplo de ecommerce / Portfólio)</h2>
+         <div class="cards-container">
+            <div class="card">
+               <h3>Produto 1</h3>
+               <p>Descrição do produto incrivel criado com flexbox fluido e flexivel.</p>
+            <button style="background: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px;">Comprar</button>
+            </div>
+            <div class="card">
+               <h3>Produto 2</h3>
+               <p>Outro card que se adapta automaticamente ao redimensionar a tela do navegador.</p>
+            <button style="background: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px;">Comprar</button>
+            </div>
+            <div class="card">
+               <h3>Produto 3</h3>
+               <p>O uso de <code>flex-wrap: wrap</code> permite que desçam para a próxima linha perfeitamente.</p>
+            <button style="background: #3498db; color: white; border: none; padding: 8px 12px; border-radius: 4px;">Comprar</button>
+            </div>
+         </div>
+</body>
+</html>
